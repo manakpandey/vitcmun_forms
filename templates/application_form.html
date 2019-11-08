@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load static %}
+
+    <style>
+        .form-control:focus {
+            color: #EABFB9;
+        }
+    </style>
+
+    <div class="container" style="color: #F6DBA6">
+        <div class="text-center">
+            <img class="img-fluid" src="{% static "logo_main.png" %}" alt="V I T C M U N" width="300" height="300"/>
+            <h5 class="w-responsive mx-auto mb-5">Application Form</h5>
+        </div>
+        <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-9 mb-md-0 mb-5">
+                <form id="application-form" name="application-form" method="POST">
+                    {% csrf_token %}
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="name" class="form-control" required>
+                                <label for="name" class="">Your name</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="email" id="email" name="email" class="form-control" required>
+                                <label for="email" class="">Your email</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="tel" id="phone" name="phone" class="form-control" required>
+                                <label for="phone" class="">Your mobile number</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="date" id="dob" name="dob" class="form-control" required>
+                                <label for="dob" class="">Your Date Of Birth</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" id="institution" name="institution" class="form-control" required>
+                                <label for="institution" class="">Your Institution</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" id="accommodation" name="accommodation" class="form-control"
+                                       required>
+                                <label for="accommodation" class="">Accommodation</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" id="council_p1" name="council_p1" class="form-control" required>
+                                <label for="council_p1" class="">First Council Preference</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" id="council_p2" name="council_p2" class="form-control" required>
+                                <label for="council_p2" class="">Second Council Preference</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form mb-0">
+                                <input type="text" id="mun_exp" name="mun_exp" class="form-control" required>
+                                <label for="mun_exp" class="">MUN Experience</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-12">
+
+                            <div class="md-form">
+                                <textarea id="imp_p1" name="imp_p1" rows="2"
+                                          class="form-control md-textarea" required></textarea>
+                                <label for="imp_p1">Write briefly on why Agenda of your first preference is important to
+                                    you.(150 Words)</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-12">
+
+                            <div class="md-form">
+                                <textarea id="q1" name="q1" rows="3"
+                                          class="form-control md-textarea" required></textarea>
+                                <label for="q1">"The Olympics represent diversity better than the United Nations."
+                                    <br>In not more than 500 words, write for or against the statement. Back up Your
+                                    thoughts
+                                    with research.</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-12">
+
+                            <div class="md-form">
+                                <textarea id="q2" name="q2" rows="3"
+                                          class="form-control md-textarea" required></textarea>
+                                <label for="q2">"You are holding the last leaf that exists in nature."
+                                    <br>Express your thoughts in any format.</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center text-md-left">
+                        <button class="btn" style="background: #F6DBA6;color: #511926" type="submit">Submit</button>
+                    </div>
+
+                </form>
+
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-3 text-center">
+                <ul class="list-unstyled mb-0">
+                    <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                        <p>VIT-Chennai Campus, TN 600127, IN</p>
+                    </li>
+
+                    <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                        <p>+ 01 234 567 89</p>
+                    </li>
+
+                    <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                        <p>contact@vitcmun.com</p>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+
+        </div>
+    </div>
+
+
+{% endblock %}
